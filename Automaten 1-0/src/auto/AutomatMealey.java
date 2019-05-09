@@ -1,5 +1,4 @@
 package auto;
-
 import java.util.Arrays;
 
 public class AutomatMealey {
@@ -127,7 +126,5 @@ public class AutomatMealey {
 		AutomatMoore newMoore = new AutomatMoore(tabelle, startzustand);
 		return newMoore;
 	}
-	
-	
 	
 }
