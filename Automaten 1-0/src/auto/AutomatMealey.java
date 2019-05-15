@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class AutomatMealey {
 	//fehler bei unbestimmt tretten auf, für unbestimmt als folgezustand -1 eintragen
+	//Automaten bitte wechseln
 	private int[][] automatenTabelle;
 	private int[] outputTabelle;
 	private int zustände;
@@ -17,6 +18,7 @@ public class AutomatMealey {
 		zustände = tabelle.length;
 		eingänge = tabelle[0].length;
 		startzustand = start;
+		
 		for(int i = 0; i < zustände; i++) {
 			for(int j = 0; j < eingänge; j++) {
 				if(tabelle[i][j] == -1) {
@@ -77,16 +79,16 @@ public class AutomatMealey {
 	@Override
 	public String toString() {
 		//anpassung für Eingänge > 10 fehlt noch
-		String output = "Startzustand: " + startzustand + "\n     ";
+		String output = "Startzustand: Z" + startzustand + "\n     ";
 		for(int l = 0; l < eingänge; l++) {
-			output = output + "X" + l + "  ";
+			output = output + "X" + l + "   ";
 		}
 		output = output + "\n";
 
 		for(int j = 0; j < zustände; j++) {
 			output = output + "Z" + j + "   ";
 			for(int i = 0; i < eingänge; i++) {
-				output = output + automatenTabelle[j][i] + "   ";
+				output = output + "Z" +automatenTabelle[j][i] + "   ";
 			}
 			output = output + outputTabelle[j] +"\n";
 		}	
